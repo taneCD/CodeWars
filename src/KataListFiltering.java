@@ -1,22 +1,19 @@
 import java.util.ArrayList;
 import java.util.List;
-
+//https://www.codewars.com/kata/53dbd5315a3c69eed20002dd/solutions/java
 public class KataListFiltering {
     public static void main(String[] args) {
 
-        List.of(1, 2, "a", "b");
-        System.out.println(filterList(List.of(1, 2, "a", "b")));
+        System.out.println(filterList(List.of(1, 2, "a", "b", 0, 15)));
     }
+
     public static List<Object> filterList(final List<Object> list) {
-        int x=0;
-//        List<Object>oop=new ArrayList<>();
-//        if()
-//        for(int i=0;i<list.size();i++){
-//            if(list.get(i).equals(list.contains(Integer.getInteger(x)))){
-//                oop.add(i);
-//            }
-//        }
-//        return oop;
-        return list;
+        List<Object> intList = new ArrayList<>();
+        for (var el : list) {
+            if (el instanceof Integer) {
+                intList.add(el);
+            }
+        }
+        return intList;
     }
 }
